@@ -27,3 +27,12 @@ $ grant all privileges on socialmediadb.* to socialuser;
 $ flush privileges;
 ```
 
+## Project Structure
+
+```shell
+src
+├───controllers      # functions to connect routes to db operations
+├───db               # db connection and model definations
+├───public           # html/js/css files for static part of site
+└───routes           # express middlewares (route wise)
+```
