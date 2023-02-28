@@ -4,11 +4,11 @@
 
 ```shell
     $ npm init
-    $ install npm node
-    $ install npm hbs
-    $ install npm express
-    $ install npm sql2
-    $ install npm sequelize
+    $ npm install node
+    $ npm install hbs
+    $ npm install express
+    $ npm install mysql2
+    $ npm install sequelize
 ```
 
 ## Database Setup
