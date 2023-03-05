@@ -5,7 +5,7 @@ const db = models.db                 //because there is no point to run server w
 
 const app =  express()
 
-db.sync()//sync all the require information then only start the server else no point
+db.sync({force: true})//sync all the require information then only start the server else no point
     .then(()=>{
         app.listen(8383,()=>{
             console.log('Server started on http://localhost:8383')

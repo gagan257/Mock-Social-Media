@@ -47,10 +47,21 @@ const Comments = db.define('comment',{//table named comment
     id: COL_ID_DEF,
     title: COL_TITLE_DEF,
     body: {
-        type: Sequelize.DataTypes.TEXT({length: 'tiny'})
+        type: Sequelize.DataTypes.TEXT('tiny')
         //TEXT types: tiny, medium, long
     }
 })
+
+//Defining relations like users can have multiple posts etc.
+Users.hasMany(Posts)
+Posts.belongsTo(Users)
+
+Users.hasMany(Comments)
+Comments.belongsTo(Users)
+
+Posts.hasMany(Comments)
+Comments.belongsTo(Posts)
+
 
 module.exports ={//exporting modules
     db,

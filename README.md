@@ -10,6 +10,12 @@
     $ npm install mysql2
     $ npm install sequelize
 ```
+                        ---------OR---------
+
+```shell
+$ npm init
+$ npm install node hbs express mysql2 sequelize       #install all in single step
+```
 
 ## Database Setup
 
@@ -35,4 +41,5 @@ src
 ├───db               # db connection and model definations
 ├───public           # html/js/css files for static part of site
 └───routes           # express middlewares (route wise)
+└───utils            # Username generator
 ```
