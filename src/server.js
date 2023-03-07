@@ -1,16 +1,18 @@
-const express = require('express')//require express
+const express = require('express')
 
-const models = require('./db/models')//getting modules from db(for server)
-const db = models.db                 //because there is no point to run server without models.db
+const { db } = require('./db/models')
+//or
+// const models =  require('./db/models')//require db/models before starting the server
+// const db = models.db                  //as there is no point to run server without this file
 
-const app =  express()
+const app =  express();
 
-db.sync({force: true})//sync all the require information then only start the server else no point
+db.sync({force: true})
     .then(()=>{
         app.listen(8383,()=>{
-            console.log('Server started on http://localhost:8383')
+            console.log('Server started on http://localhost:8383');
         })
     }).catch((err)=>{
-        console.log(new Error('Could not start database'))
-        console.log(err)
+        console.error(new Error('Could not start database'))
+        console.error(err)
     })

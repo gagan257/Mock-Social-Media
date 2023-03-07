@@ -1,40 +1,34 @@
-const { title } = require('process')
-const Sequelize = require('sequelize')//adding sequelize
+const Sequelize =  require('sequelize')
 
-const db = new Sequelize({//defining database, user, pasword for connection with db
+const db = new Sequelize({
     dialect: 'mysql',
     database: 'socialmediadb',
     username: 'gagan',
     password: '1234',
 })
 
-//COMMON NAME CREATION
-//easy for us to simply use these names everywhere in tables
-
-const COL_ID_DEF = {//defining a default ID (structure)
+const COL_ID_DEF = {
     type: Sequelize.DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true
 }
-const COL_USERNAME_DEF = {//defining a default username (structure)
+const COL_USERNAME_DEF = {
     type: Sequelize.DataTypes.STRING(30),
     unique: true,
     allowNull: false
 }
-const COL_TITLE_DEF = {//defining a default title (structure)
+const COL_TITLE_DEF = {
     type: Sequelize.DataTypes.STRING(140),
     allowNull: false
 }
 
-// TABLE DEFINATION STARTS HERE
-//sequelize makes given name plural because table stores more that 1 information(eg: user->users)
 
-const Users = db.define('user',{//table named user
+const Users = db.define('user',{
     id: COL_ID_DEF,
     username: COL_USERNAME_DEF
 })
 
-const Posts = db.define('post',{//table named post
+const Posts = db.define('post',{
     id: COL_ID_DEF,
     title: COL_TITLE_DEF,
     body: {
@@ -43,16 +37,14 @@ const Posts = db.define('post',{//table named post
     }
 })
 
-const Comments = db.define('comment',{//table named comment
+const Comments = db.define('comment',{
     id: COL_ID_DEF,
     title: COL_TITLE_DEF,
     body: {
         type: Sequelize.DataTypes.TEXT('tiny')
-        //TEXT types: tiny, medium, long
     }
 })
 
-//Defining relations like users can have multiple posts etc.
 Users.hasMany(Posts)
 Posts.belongsTo(Users)
 
@@ -62,8 +54,7 @@ Comments.belongsTo(Users)
 Posts.hasMany(Comments)
 Comments.belongsTo(Posts)
 
-
-module.exports ={//exporting modules
+module.exports = {
     db,
     Users,
     Posts,

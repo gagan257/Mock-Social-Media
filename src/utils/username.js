@@ -1,43 +1,31 @@
-const { Model } = require("sequelize")
+
 
 const ADJECTIVES = [
+    'boundless',
+    'plausible',
     'sleepy',
-    'minor',
-    'elastic',
-    'complex',
-    'elated',
-    'parsimonious',
-    'pink',
-    'humdrum',
-    'numberless',
-    'average'
+    'electronic',
+    'dangerous',
+    'slim',
+    'purple',
 ]
 
-const ObJECTS = [
-    'hammer',
-    'flower',
-    'slippers',
-    'tomato',
-    'desk',
-    'thermostat',
-    'laptop',
-    'plate',
-    'soap',
-    'sponge'
+const OBJECTS = [
+    'puddle',
+    'piano',
+    'window',
+    'bowl',
+    'socks',
+    'brocolli',
+    'chalk'
 ]
 
-function genRandomUsername(){
-    const adj = ADJECTIVES[Math.floor(Math.random()*10)]
-    const obj = ObJECTS[Math.floor(Math.random()*10)]
+function genRandomUsername() {
+    const adj = ADJECTIVES[Math.floor(Math.random() * 7)]
+    const obj = OBJECTS[Math.floor(Math.random() * 7)]
     return `${adj}-${obj}`
 }
 
-// console.log(genRandomUsername())
-// console.log(genRandomUsername())
-// console.log(genRandomUsername())
-// console.log(genRandomUsername())
-// console.log(genRandomUsername())
-
-module.exports ={
+module.exports = {
     genRandomUsername
 }
