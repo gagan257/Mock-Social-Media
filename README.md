@@ -76,3 +76,15 @@ src
 2. **show all comments (under a post)**
 
 3. **add a comment**
+
+## Application
+
+**Search new user (GET request)**
+
+`http://localhost:8383/api/users/"username"`
+`OR`
+`http://localhost:8383/api/users/"id"`
+
+**Add new user (POST request)**
+
+`http://localhost:8383/api/users`
