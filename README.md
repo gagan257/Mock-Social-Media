@@ -44,6 +44,8 @@ src
 └───utils            # Username generator
 ```
 
+<a href="#"><img width="60%" height="auto" src="Images/structure.png" height="100px"/></a>
+
 ## Business Structure
 
 ### Users
