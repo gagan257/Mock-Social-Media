@@ -35,6 +35,8 @@ $ flush privileges;
 
 ## Project Structure
 
+### Backend (Server)
+
 ```shell
 src
 ├───controllers      # functions to connect routes to db operations
@@ -55,9 +57,12 @@ src/public
 ├── components                              
 │   └── navbar.html
 ├── css                                     
-│   └── bootstrap.css                       
+│   └── bootstrap.css
+│   └── login.css                   
 └── js                                      
     └── bootstrap.js
+    └── jquery-3.4.1.js
+    └── popper.js
 ```
 
 ## Business Structure

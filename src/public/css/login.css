@@ -1,0 +1,42 @@
+/* Set background color */
+body {
+    background-color: #f1f1f1;
+}
+  
+  /* Add border and padding to an image */
+img {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+  
+  /* Style a button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+  /* Create a responsive grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.column {
+    flex: 25%;
+    padding: 0 10px;
+}
+  
+  /* Style a link */
+a {
+    color: blue;
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  

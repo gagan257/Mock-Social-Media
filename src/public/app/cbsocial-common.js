@@ -1,3 +1,3 @@
 $(() => {
-    $('#navbar').load('/navbar.html')
+    $('#navbar').load('../components/navbar.html')
 })
