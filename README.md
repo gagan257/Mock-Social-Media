@@ -46,6 +46,20 @@ src
 
 <a href="#"><img width="60%" height="auto" src="Images/structure.png" height="100px"/></a>
 
+## Frontend (client side code)
+
+```shell
+src/public
+├── app                                     
+│   └── cbsocial-common.js
+├── components                              
+│   └── navbar.html
+├── css                                     
+│   └── bootstrap.css                       
+└── js                                      
+    └── bootstrap.js
+```
+
 ## Business Structure
 
 ### Users
@@ -90,3 +104,37 @@ src
 **Add new user (POST request)**
 
 `http://localhost:8383/api/users`
+
+## API Documentation
+
+### `users`
+
+1. `POST /users`
+
+Creates a new user with random username and an user id
+
+2. `GET /users/{userid}`
+
+Get an user with a given user id
+
+3. `GET /users/{username}`
+
+Get an user with a given username
+
+### `Posts`
+
+1. `GET /posts/`
+
+Get all posts by everyone
+
+2. `POST /posts`
+
+Create a new post.
+
+Required fields in body-
+
+```
+userId=
+title=
+body=
+```
