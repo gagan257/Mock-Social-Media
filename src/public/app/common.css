@@ -1,0 +1,19 @@
+#navbar{
+    position: sticky;
+    top: 0px;
+}
+#footer{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: var(--light);
+    position: sticky;
+    bottom: 0px;
+}
+.footer-backtotop{
+    text-decoration: none;
+    color: black;
+}
+
+#content{
+    height: 1000px;
+}

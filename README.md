@@ -14,7 +14,7 @@
 
 ```shell
 $ npm init
-$ npm install node hbs express mysql2 sequelize       #install all in single step
+$ npm install node hbs express mysql2 sequelize       # install all in single step
 ```
 
 ## Database Setup
@@ -52,14 +52,15 @@ src
 
 ```shell
 src/public
-├── app                                     
+├── app                         # our own frontend js code            
 │   └── cbsocial-common.js
-├── components                              
+├── components                  # own html snippets   
 │   └── navbar.html
-├── css                                     
+├── css                         # css libraries we are using                  
 │   └── bootstrap.css
-│   └── login.css                   
-└── js                                      
+│   └── login.css
+├── index.html                  # first / home page 
+└── js                          # js libraries we are using            
     └── bootstrap.js
     └── jquery-3.4.1.js
     └── popper.js
