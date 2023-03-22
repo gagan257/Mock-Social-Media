@@ -54,12 +54,16 @@ src
 src/public
 ├── app                         # our own frontend js code            
 │   └── cbsocial-common.js
+│   └── common.css
 ├── components                  # own html snippets   
 │   └── navbar.html
+│   └── footer.html
+│   └── all-posts.html
 ├── css                         # css libraries we are using                  
 │   └── bootstrap.css
 │   └── login.css
-├── index.html                  # first / home page 
+├── index.html                  # first / home page
+├── login.hbs [TBD]                   
 └── js                          # js libraries we are using            
     └── bootstrap.js
     └── jquery-3.4.1.js
@@ -103,9 +107,9 @@ src/public
 
 **Search new user (GET request)**
 
-`http://localhost:8383/api/users/"username"`
+`http://localhost:8383/api/users/:username`
 `OR`
-`http://localhost:8383/api/users/"id"`
+`http://localhost:8383/api/users/:id`
 
 **Add new user (POST request)**
 
@@ -119,11 +123,11 @@ src/public
 
 Creates a new user with random username and an user id
 
-2. `GET /users/{userid}`
+2. `GET /users/:userid`
 
 Get an user with a given user id
 
-3. `GET /users/{username}`
+3. `GET /users/:username`
 
 Get an user with a given username
 
@@ -140,7 +144,7 @@ Create a new post.
 Required fields in body-
 
 ```
-userId=
-title=
-body=
+userId
+title
+body
 ```
